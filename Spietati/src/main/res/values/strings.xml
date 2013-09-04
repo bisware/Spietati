@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Spietati</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="btnCerca">Cerca</string>
+    <string name="txtRicerca">Ricerca</string>
+    <string name="title_activity_ricerca">Ricerca</string>
+    <string name="btnAggiornaElenco">Aggiorna</string>
+    <string name="title_activity_recensione">Recensione film</string>
+
+</resources>

@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtRicerca"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:inputType="text"
+            android:hint="@string/txtRicerca"
+            android:layout_toLeftOf="@+id/btnCerca"
+            android:visibility="invisible"/>
+
+    <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnCerca"
+            android:id="@+id/btnCerca"
+            android:clickable="false"
+            android:onClick="beginSearch"
+            android:layout_alignTop="@+id/txtRicerca"
+            android:layout_toLeftOf="@+id/aggiornaElenco"
+            android:visibility="invisible"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Seleziona un titolo dall'elenco"
+            android:id="@+id/label1"
+            android:textColor="#912532"
+            android:textStyle="bold"
+            android:layout_below="@+id/txtRicerca"
+            android:layout_alignParentLeft="true"/>
+
+    <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:id="@+id/listView"
+            android:layout_below="@+id/label1"
+            android:layout_alignParentLeft="true"/>
+
+    <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnAggiornaElenco"
+            android:id="@+id/aggiornaElenco"
+            android:clickable="false"
+            android:onClick="beginSearch"
+            android:layout_alignTop="@+id/btnCerca"
+            android:layout_alignParentRight="true"
+            android:visibility="invisible"/>
+
+</RelativeLayout>
