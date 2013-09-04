@@ -25,80 +25,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="273dd8ca-c243-4564-b341-ef3f69423749" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/libs/android-support-v4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/ic_launcher-web.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build/res/all/debug/drawable-hdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build/res/all/debug/drawable-mdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build/res/all/debug/drawable-xhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build/res/all/debug/drawable-xxhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/drawable-hdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/drawable-mdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/drawable-xhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/drawable-xxhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/libs/jsoup-1.7.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build/source/buildConfig/debug/com/bisware/spietati/BuildConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/utils/Costanti.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/DisplayRecensioneActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/bean/ElencoRecensioniItem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/MainActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/demo/ParserDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build/source/r/debug/com/bisware/spietati/R.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/bean/Recensione.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/adapter/RecensioniAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/RicercaActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/bean/SchedaFilm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/Spietati.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpietatiProject.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/utils/Utils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build/res/all/debug/layout/activity_main.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/layout/activity_main.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build/res/all/debug/layout/activity_recensione.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/layout/activity_recensione.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build/res/all/debug/layout/activity_ricerca.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/layout/activity_ricerca.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/values/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/values-sw600dp/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/values-sw720dp-land/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradlew.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradlew" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jsoup_1_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jsoup_1_7_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build/res/all/debug/menu/main.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/menu/main.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build/res/all/debug/layout/recensione_webview.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/layout/recensione_webview.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build/res/all/debug/menu/ricerca.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/menu/ricerca.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build/res/all/debug/layout/row_elenco_film.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/layout/row_elenco_film.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/values/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/values/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/values-v11/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/src/main/res/values-v14/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_13_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/uno.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build/res/all/debug/values/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build/res/all/debug/values-sw720dp-land/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build/res/all/debug/values-v11/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spietati/build/res/all/debug/values-v14/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Spietati.iws" />
@@ -651,6 +577,11 @@
       <created>1374685439797</created>
       <updated>1374685439797</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit 2">
+      <created>1378330541753</created>
+      <updated>1378330541753</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
