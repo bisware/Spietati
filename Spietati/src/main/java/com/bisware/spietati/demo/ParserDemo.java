@@ -58,10 +58,16 @@ public class ParserDemo {
     private static void testElenco() throws IOException {
         Document document = Jsoup.connect(urlRecensioni).get();
 
-        for (Element titolo: document.select(".tableRecensioni a"))
+        Elements base = document.select(".tableRecensioni");
+
+        for (Element e: base.select(".redazioneTdTitle, a"))
         {
-            System.out.println(titolo.text());
-            System.out.println(titolo.attr("href"));
+            if (e.tagName().equals("a")) {
+                System.out.println(e.text());
+                System.out.println(e.attr("href"));
+            } else {
+                System.out.println("MESE: " + e.text());
+            }
         }
     }
 

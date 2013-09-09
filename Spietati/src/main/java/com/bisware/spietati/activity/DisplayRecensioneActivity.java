@@ -2,6 +2,7 @@ package com.bisware.spietati.activity;
 
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,6 +12,7 @@ import android.location.LocationListener;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Html;
 import android.text.TextUtils;
 import android.view.View;
 import android.webkit.WebView;
@@ -43,22 +45,21 @@ import java.util.List;
 
 public class DisplayRecensioneActivity extends Activity {
 
-    private WebView browser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recensione);
 
-        Intent intent = getIntent();
-
+        //Intent intent = getIntent();
         //String idFilm = intent.getStringExtra(MainActivity.EXTRA_IDFILM);
         //String url = Costanti.URL_BASE_SPIETATI + Costanti.URL_SCHEDA_DETT + idFilm;
 
+        Intent intent = getIntent();
         String urlSchedaFilm = intent.getStringExtra(MainActivity.EXTRA_IDFILM);
         String urlDaCaricare = Costanti.URL_BASE_SPIETATI + urlSchedaFilm;
 
-        Toast.makeText(this, "Apertura recensione in corso...", Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "Apertura recensione in corso...", Toast.LENGTH_LONG).show();
 
         new ParseSchedaFilmTask().execute(urlSchedaFilm);
 
@@ -71,6 +72,13 @@ public class DisplayRecensioneActivity extends Activity {
     private class ParseSchedaFilmTask extends AsyncTask<String, Void, SchedaFilm> {
 
         private Exception e;
+        protected ProgressDialog loadingWheel;
+
+        @Override
+        protected void onPreExecute() {
+            loadingWheel = ProgressDialog.show(DisplayRecensioneActivity.this,
+                    "Caricamento", "Apertura recensione in corso. Attendi...", true, false);//
+        }
 
         @Override
         protected SchedaFilm doInBackground(String... urlSchedaFilm)  {
@@ -98,7 +106,8 @@ public class DisplayRecensioneActivity extends Activity {
                         trama = p.text();
                         isTrama = false;
                     } else {
-                        paragrafi.add(p.text());
+                        //paragrafi.add(p.text());
+                        paragrafi.add(p.html());
                     }
                 }
                 String corpo = TextUtils.join("\n\n", paragrafi.toArray());
@@ -128,6 +137,8 @@ public class DisplayRecensioneActivity extends Activity {
 
         @Override
         protected void onPostExecute(SchedaFilm schedaFilm) {
+
+            loadingWheel.dismiss();
 
             final ImageView imageLocandina = (ImageView)findViewById(R.id.imageSchedaLocandina);
             final TextView textTitolo = (TextView)findViewById (R.id.textSchedaTitolo);
@@ -162,11 +173,13 @@ public class DisplayRecensioneActivity extends Activity {
             textTitolo.setText(schedaFilm.getTitolo());
             textRegista.setText(schedaFilm.getRegista());
 
-            Recensione recensione =schedaFilm.getRecensione();
+            Recensione recensione = schedaFilm.getRecensione();
             textTrama.setText(recensione.getTrama());
-            textCorpo.setText(recensione.getCorpo());
+            //textCorpo.setText(recensione.getCorpo());
+            textCorpo.setText(Html.fromHtml(recensione.getCorpo()));
             textAutore.setText(recensione.getAutore() +
                     " - "+ recensione.getVoto() + " " + recensione.getData());
+
         }
     }
 }

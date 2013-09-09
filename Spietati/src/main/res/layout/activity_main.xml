@@ -17,7 +17,7 @@
             android:inputType="text"
             android:hint="@string/txtRicerca"
             android:layout_toLeftOf="@+id/btnCerca"
-            android:visibility="invisible"/>
+            />
 
     <Button
             style="?android:attr/buttonStyleSmall"
@@ -25,11 +25,11 @@
             android:layout_height="wrap_content"
             android:text="@string/btnCerca"
             android:id="@+id/btnCerca"
-            android:clickable="false"
             android:onClick="beginSearch"
             android:layout_alignTop="@+id/txtRicerca"
             android:layout_toLeftOf="@+id/aggiornaElenco"
-            android:visibility="invisible"/>
+            android:layout_alignBottom="@+id/txtRicerca"
+            />
 
     <TextView
             android:layout_width="wrap_content"

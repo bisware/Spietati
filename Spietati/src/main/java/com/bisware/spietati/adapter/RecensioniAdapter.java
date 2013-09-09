@@ -23,26 +23,6 @@ public class RecensioniAdapter extends ArrayAdapter<ElencoRecensioniItem> {
     public View getView(int position, View convertView, ViewGroup parent) {
         return getViewOptimize(position, convertView, parent);
     }
-//        LayoutInflater inflater = (LayoutInflater) context
-//                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//
-//        View rowView = inflater.inflate(R.layout.row_elenco_film, parent, false);
-//        TextView nome = (TextView) rowView.findViewById(R.id.label);
-//        TextView descrizione = (TextView) rowView.findViewById(R.id.secondLine);
-//        //ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
-//        ElencoRecensioniItem r = getItem(position);   //values[position]
-//        nome.setText(r.getTitolo());
-//        descrizione.setText(r.getIdFilm());
-////        // Change the icon for Windows and iPhone
-////        String s = values[position];
-////        if (s.startsWith("iPhone")) {
-////            imageView.setImageResource(R.drawable.no);
-////        } else {
-////            imageView.setImageResource(R.drawable.ok);
-////        }
-//
-//        return rowView;
-//    }
 
     public View getViewOptimize(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder = null;
@@ -52,6 +32,7 @@ public class RecensioniAdapter extends ArrayAdapter<ElencoRecensioniItem> {
             convertView = inflater.inflate(R.layout.row_elenco_film, parent, false);
 
             viewHolder = new ViewHolder();
+            viewHolder.mese = (TextView)convertView.findViewById(R.id.mese);
             viewHolder.name = (TextView)convertView.findViewById(R.id.label);
             viewHolder.description = (TextView)convertView.findViewById(R.id.secondLine);
             convertView.setTag(viewHolder);
@@ -60,12 +41,14 @@ public class RecensioniAdapter extends ArrayAdapter<ElencoRecensioniItem> {
         }
 
         ElencoRecensioniItem r = getItem(position);
+        viewHolder.mese.setText(r.getMese());
         viewHolder.name.setText(r.getTitolo());
         viewHolder.description.setText(r.getIdFilm());
         return convertView;
     }
 
     private class ViewHolder {
+        public TextView mese;
         public TextView name;
         public TextView description;
     }
