@@ -34,8 +34,6 @@ public class MainActivity extends Activity {
     public final static String EXTRA_MESSAGE = "com.bisware.spietati.MESSAGE";
     public final static String EXTRA_IDFILM = "com.gmail.superbisco.spietati.IDRECENSIONE";
 
-    protected final Button buttonSearch = (Button)findViewById(R.id.btnCerca);
-
     public void beginSearch(View view) {
         Intent intent = new Intent(this, RicercaActivity.class);
 
@@ -52,6 +50,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         // ricerca
+        Button buttonSearch = (Button)findViewById(R.id.btnCerca);
         buttonSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,7 +88,7 @@ public class MainActivity extends Activity {
         @Override
         protected void onPreExecute() {
             loadingWheel = ProgressDialog.show(MainActivity.this,
-                    "Caricamento", "Caricamento recensioni in corso. Attendi...", true, false);//
+               "Caricamento", "Caricamento recensioni in corso. Attendi...", true, true);
         }
 
 
