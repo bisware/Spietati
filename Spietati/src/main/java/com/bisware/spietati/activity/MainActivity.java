@@ -34,16 +34,6 @@ public class MainActivity extends Activity {
     public final static String EXTRA_MESSAGE = "com.bisware.spietati.MESSAGE";
     public final static String EXTRA_IDFILM = "com.gmail.superbisco.spietati.IDRECENSIONE";
 
-    public void beginSearch(View view) {
-        Intent intent = new Intent(this, RicercaActivity.class);
-
-        EditText editText = (EditText) findViewById(R.id.txtRicerca);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-        Toast.makeText(this, "Ricerca " + message +" in corso...", Toast.LENGTH_LONG).show();
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,17 +44,35 @@ public class MainActivity extends Activity {
         buttonSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                beginSearch(view);
+                beginSearch();
             }
         });
 
-
-        // elenzo ultime recensioni
-        new DownloadRecensioniTask().execute();
-
-        //Toast.makeText(this, "Caricamento elenco ultime recensioni" , Toast.LENGTH_LONG).show();
+        // aggiornamento elenco
+        Button buttonAggiorna = (Button)findViewById(R.id.btnAggiornaElenco);
+        buttonAggiorna.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                aggiornaElenco(view);
+            }
+        });
     }
 
+    public void beginSearch() {
+        Intent intent = new Intent(this, RicercaActivity.class);
+
+        EditText editText = (EditText) findViewById(R.id.txtRicerca);
+        String message = editText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+
+        showMessage("Ricerca " + message + " in corso...");
+    }
+
+    private void aggiornaElenco(View view) {
+        // elenzo ultime recensioni
+        new DownloadRecensioniTask().execute();
+    }
 
 
     @Override
@@ -84,6 +92,7 @@ public class MainActivity extends Activity {
     private class DownloadRecensioniTask extends AsyncTask<Void, Void, List<ElencoRecensioniItem>> {
 
         protected ProgressDialog loadingWheel;
+        protected Exception eccezione = null;
 
         @Override
         protected void onPreExecute() {
@@ -112,7 +121,7 @@ public class MainActivity extends Activity {
                     }
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                eccezione = e;
             }
             return listaFilm;
         }
@@ -122,6 +131,11 @@ public class MainActivity extends Activity {
         protected void onPostExecute(List<ElencoRecensioniItem> result) {
 
             loadingWheel.dismiss();
+
+            if (this.eccezione != null) {
+                showMessage(eccezione.getMessage());
+                return;
+            }
 
             RecensioniAdapter adapter = new RecensioniAdapter(MainActivity.this,
                     R.layout.row_elenco_film, result);
@@ -139,13 +153,19 @@ public class MainActivity extends Activity {
 
                     apriRecensione(r);
 
-//                    Toast.makeText(view.getContext(),
-//                            "Apertura recensione " + r.getTitolo(), Toast.LENGTH_LONG)
-//                            .show();
+//                  showMessage("Apertura recensione " + r.getTitolo())
                 }
             };
             listView.setOnItemClickListener(clickListener);
         }
 
+    }
+
+    private void showMessage(String message) {
+        showMessage(message, Toast.LENGTH_LONG);
+    }
+
+    private void showMessage(String message, int len) {
+        Toast.makeText(this, "Errore: " + message, len).show();
     }
 }

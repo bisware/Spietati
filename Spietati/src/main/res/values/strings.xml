@@ -7,7 +7,7 @@
     <string name="btnCerca">Cerca</string>
     <string name="txtRicerca">Ricerca</string>
     <string name="title_activity_ricerca">Ricerca</string>
-    <string name="btnAggiornaElenco">Aggiorna</string>
+    <string name="btnAggiornaElenco">Aggiorna elenco</string>
     <string name="title_activity_recensione">Recensione film</string>
 
 </resources>

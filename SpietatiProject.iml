@@ -6,8 +6,10 @@
       <excludeFolder url="file://$MODULE_DIR$/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Android 4.2.2 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jsoup-1.7.2" level="project" />
+    <orderEntry type="library" name="android-support-v4" level="project" />
   </component>
 </module>
 

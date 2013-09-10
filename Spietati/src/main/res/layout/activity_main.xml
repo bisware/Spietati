@@ -27,7 +27,7 @@
             android:id="@+id/btnCerca"
             android:onClick="beginSearch"
             android:layout_alignTop="@+id/txtRicerca"
-            android:layout_toLeftOf="@+id/aggiornaElenco"
+            android:layout_toLeftOf="@+id/btnAggiornaElenco"
             android:layout_alignBottom="@+id/txtRicerca"
             />
 
@@ -55,11 +55,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btnAggiornaElenco"
-            android:id="@+id/aggiornaElenco"
+            android:id="@+id/btnAggiornaElenco"
             android:clickable="false"
             android:onClick="beginSearch"
             android:layout_alignTop="@+id/btnCerca"
             android:layout_alignParentRight="true"
-            android:visibility="invisible"/>
+            android:layout_alignBottom="@+id/txtRicerca"/>
 
 </RelativeLayout>

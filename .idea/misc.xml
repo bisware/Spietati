@@ -3,6 +3,7 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
+  <component name="IdProvider" IDEtalkID="A80A935463E9F9ECFBB05B1ADA63B88E" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="Android 4.2.2 Platform" project-jdk-type="Android SDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
