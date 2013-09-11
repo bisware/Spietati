@@ -3,12 +3,23 @@ package com.bisware.spietati.demo;
 import com.bisware.spietati.bean.Recensione;
 import com.bisware.spietati.bean.SchedaFilm;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class ParserDemo {
 
@@ -18,7 +29,37 @@ public class ParserDemo {
     public static void main(String... args) throws Exception {
 
         //testElenco();
-        testRecensione("4830");
+        //testRecensione("4830");
+        testRicerca2("la grande bellezza");
+    }
+
+    private static void testRicerca2(String queryRicerca) throws Exception {
+        String key = "AIzaSyC8Sp8lJkKNOmcKilbW3wejjRLz-ktc_G0";
+        String qry = "la+grande+bellezza";
+        String cx = "partner-pub-4445160703635697%3Avo6do6-qhci";
+        String siteSearch = "www.spietati.it";
+
+        URL url = new URL(
+                "https://www.googleapis.com/customsearch/v1?key="+key +
+                        "&cx="+ cx + "&q="+ qry + "&alt=json");
+
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
+        conn.setRequestProperty("Accept", "application/json");
+        BufferedReader br = new BufferedReader(new InputStreamReader(
+                (conn.getInputStream())));
+
+        String output;
+        System.out.println("Output from Server .... \n");
+        while ((output = br.readLine()) != null) {
+
+            if(output.contains("\"link\": \"")){
+                String link=output.substring(output.indexOf("\"link\": \"")+("\"link\": \"").length(), output.indexOf("\","));
+                System.out.println(link);       //Will print the google search links
+            }
+        }
+
+        conn.disconnect();
     }
 
     private static void testRecensione(String idfilm)throws IOException {

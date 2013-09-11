@@ -15,9 +15,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageSchedaLocandina"
-                android:layout_gravity="center_vertical|left"
+                android:layout_gravity="center_horizontal"
                 android:src="@drawable/ic_launcher"
-                android:contentDescription="Locandina"/>
+                android:contentDescription="Locandina"
+            android:layout_margin="5dp"
+            android:background="#afafaf" />
 
         <TextView
                 android:layout_width="wrap_content"

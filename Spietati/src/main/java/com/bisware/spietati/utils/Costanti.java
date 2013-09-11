@@ -16,4 +16,14 @@ public class Costanti {
 
     // pagina degli speciali
     public final static String URL_SPECIALI = "z_speciali.asp";
+
+    // pagina di ricerca
+    public static final String URL_GOOGLE = "http://www.google.it/cse?cx=partner-pub-4445160703635697%3Avo6do6-qhci&ie=ISO-8859-1&q=";
+
+    // google apis key
+    public static final String GOOGLE_APIS_KEY = "AIzaSyC8Sp8lJkKNOmcKilbW3wejjRLz-ktc_G0";
+
+    // google apis cx site spietati
+    public static final String GOOGLE_APIS_CX = "partner-pub-4445160703635697%3Avo6do6-qhci";
+
 }

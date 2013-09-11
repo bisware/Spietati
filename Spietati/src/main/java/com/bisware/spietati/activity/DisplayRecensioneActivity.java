@@ -71,13 +71,13 @@ public class DisplayRecensioneActivity extends Activity {
 
     private class ParseSchedaFilmTask extends AsyncTask<String, Void, SchedaFilm> {
 
-        private Exception e;
         protected ProgressDialog loadingWheel;
+        protected Exception eccezione = null;
 
         @Override
         protected void onPreExecute() {
             loadingWheel = ProgressDialog.show(DisplayRecensioneActivity.this,
-                    "Caricamento", "Apertura recensione in corso. Attendi...", true, false);//
+                    "Caricamento", "Apertura recensione in corso...", true, false);//
         }
 
         @Override
@@ -124,8 +124,9 @@ public class DisplayRecensioneActivity extends Activity {
                 recensione.setData(data);
 
                 film.setRecensione(recensione);
-            } catch (IOException e) {
-                this.e = e;
+
+            } catch (IOException eccezione) {
+                this.eccezione = eccezione;
 
                 Toast.makeText(getApplicationContext(),
                         "Errore durante il parsing della scheda" , Toast.LENGTH_LONG).show();
@@ -171,7 +172,7 @@ public class DisplayRecensioneActivity extends Activity {
 
 
             textTitolo.setText(schedaFilm.getTitolo());
-            textRegista.setText(schedaFilm.getRegista());
+            textRegista.setText("di " + schedaFilm.getRegista());
 
             Recensione recensione = schedaFilm.getRecensione();
             textTrama.setText(recensione.getTrama());

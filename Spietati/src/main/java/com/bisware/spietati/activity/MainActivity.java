@@ -1,6 +1,7 @@
 package com.bisware.spietati.activity;
 
 import android.app.ProgressDialog;
+import android.app.SearchManager;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -31,7 +32,7 @@ import java.util.List;
 
 public class MainActivity extends Activity {
 
-    public final static String EXTRA_MESSAGE = "com.bisware.spietati.MESSAGE";
+    public final static String EXTRA_QUERY_RICERCA = "com.bisware.spietati.QUERY_RICERCA";
     public final static String EXTRA_IDFILM = "com.gmail.superbisco.spietati.IDRECENSIONE";
 
     @Override
@@ -59,14 +60,17 @@ public class MainActivity extends Activity {
     }
 
     public void beginSearch() {
-        Intent intent = new Intent(this, RicercaActivity.class);
-
         EditText editText = (EditText) findViewById(R.id.txtRicerca);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
+
+        String queryRicerca = editText.getText().toString();
+
+        Intent intent = new Intent(this, RicercaActivity.class);
+        intent.putExtra(EXTRA_QUERY_RICERCA, queryRicerca);
+        //Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+        //intent.putExtra(SearchManager.SUGGEST_URI_PATH_QUERY, queryRicerca);
         startActivity(intent);
 
-        showMessage("Ricerca " + message + " in corso...");
+        //showMessage("Ricerca " + queryRicerca + " in corso...");
     }
 
     private void aggiornaElenco(View view) {
@@ -133,7 +137,7 @@ public class MainActivity extends Activity {
             loadingWheel.dismiss();
 
             if (this.eccezione != null) {
-                showMessage(eccezione.getMessage());
+                showMessage("Errore: " + eccezione.getMessage());
                 return;
             }
 
@@ -166,6 +170,6 @@ public class MainActivity extends Activity {
     }
 
     private void showMessage(String message, int len) {
-        Toast.makeText(this, "Errore: " + message, len).show();
+        Toast.makeText(this, message, len).show();
     }
 }
