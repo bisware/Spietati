@@ -5,26 +5,15 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
-import android.location.Location;
-import android.location.LocationListener;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.Html;
 import android.text.TextUtils;
-import android.view.View;
-import android.webkit.WebView;
-import android.widget.AdapterView;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bisware.spietati.R;
-import com.bisware.spietati.adapter.RecensioniAdapter;
-import com.bisware.spietati.bean.ElencoRecensioniItem;
 import com.bisware.spietati.bean.Recensione;
 import com.bisware.spietati.bean.SchedaFilm;
 import com.bisware.spietati.utils.Costanti;
@@ -36,10 +25,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 

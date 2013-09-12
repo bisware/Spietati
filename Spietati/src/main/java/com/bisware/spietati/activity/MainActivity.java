@@ -1,7 +1,6 @@
 package com.bisware.spietati.activity;
 
 import android.app.ProgressDialog;
-import android.app.SearchManager;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -16,7 +15,8 @@ import android.widget.Toast;
 
 import com.bisware.spietati.R;
 import com.bisware.spietati.adapter.RecensioniAdapter;
-import com.bisware.spietati.bean.ElencoRecensioniItem;
+import com.bisware.spietati.bean.ItemElencoRecensioni;
+import com.bisware.spietati.bean.ItemFilm;
 import com.bisware.spietati.utils.Costanti;
 
 import org.jsoup.Jsoup;
@@ -86,14 +86,14 @@ public class MainActivity extends Activity {
         return true;
     }
 
-    private void apriRecensione(ElencoRecensioniItem r) {
+    public void apriRecensione(ItemElencoRecensioni r) {
         Intent intent = new Intent(this, DisplayRecensioneActivity.class);
-        intent.putExtra(EXTRA_IDFILM, r.getIdFilm());
+        intent.putExtra(EXTRA_IDFILM, r.getFilm().getIdFilm());
         startActivity(intent);
     }
 
 
-    private class DownloadRecensioniTask extends AsyncTask<Void, Void, List<ElencoRecensioniItem>> {
+    private class DownloadRecensioniTask extends AsyncTask<Void, Void, List<ItemElencoRecensioni>> {
 
         protected ProgressDialog loadingWheel;
         protected Exception eccezione = null;
@@ -106,8 +106,8 @@ public class MainActivity extends Activity {
 
 
         @Override
-        protected List<ElencoRecensioniItem> doInBackground(Void... params) {
-            List<ElencoRecensioniItem> listaFilm = new LinkedList<ElencoRecensioniItem>();
+        protected List<ItemElencoRecensioni> doInBackground(Void... params) {
+            List<ItemElencoRecensioni> listaFilm = new LinkedList<ItemElencoRecensioni>();
             Document doc;
             try {
                 doc = Jsoup.connect(Costanti.URL_BASE_SPIETATI + Costanti.URL_RECENSIONI).get();
@@ -117,9 +117,11 @@ public class MainActivity extends Activity {
                 for (Element film : films)
                 {
                     if (film.tagName().equals("a")) {
-                        String nome = film.text();
-                        String idfilm = film.attr("href");
-                        listaFilm.add(new ElencoRecensioniItem(mese, nome, idfilm));
+                        ItemFilm itemFilm = new ItemFilm(film.text(), film.attr("href"));
+                        //String nome = film.text();
+                        //String idfilm = film.attr("href");
+
+                        listaFilm.add(new ItemElencoRecensioni(mese, itemFilm));
                     } else {
                         mese = film.text();
                     }
@@ -132,7 +134,7 @@ public class MainActivity extends Activity {
 
 
         @Override
-        protected void onPostExecute(List<ElencoRecensioniItem> result) {
+        protected void onPostExecute(List<ItemElencoRecensioni> result) {
 
             loadingWheel.dismiss();
 
@@ -144,7 +146,7 @@ public class MainActivity extends Activity {
             RecensioniAdapter adapter = new RecensioniAdapter(MainActivity.this,
                     R.layout.row_elenco_film, result);
 
-            final ListView listView = (ListView)findViewById (R.id.listView);
+            final ListView listView = (ListView)findViewById (R.id.listRecensioni);
             listView.setAdapter(adapter);
 
             // Evento click
@@ -153,11 +155,10 @@ public class MainActivity extends Activity {
                 @Override
                 public void onItemClick(AdapterView<?> adapter, View view,
                                         int position, long id) {
-                    ElencoRecensioniItem r = (ElencoRecensioniItem)adapter.getItemAtPosition(position);
+                    ItemElencoRecensioni r = (ItemElencoRecensioni)adapter.getItemAtPosition(position);
 
                     apriRecensione(r);
 
-//                  showMessage("Apertura recensione " + r.getTitolo())
                 }
             };
             listView.setOnItemClickListener(clickListener);

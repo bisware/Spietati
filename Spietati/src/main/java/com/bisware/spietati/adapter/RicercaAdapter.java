@@ -13,9 +13,9 @@ import com.bisware.spietati.bean.ItemElencoRecensioni;
 import java.util.List;
 
 
-public class RecensioniAdapter extends ArrayAdapter<ItemElencoRecensioni> {
+public class RicercaAdapter extends ArrayAdapter<ItemElencoRecensioni> {
 
-    public RecensioniAdapter(Context context, int textViewResourceId, List<ItemElencoRecensioni> values) {
+    public RicercaAdapter(Context context, int textViewResourceId, List<ItemElencoRecensioni> values) {
         super(context, textViewResourceId, values);
     }
 
@@ -25,7 +25,7 @@ public class RecensioniAdapter extends ArrayAdapter<ItemElencoRecensioni> {
     }
 
     public View getViewOptimize(int position, View convertView, ViewGroup parent) {
-        ViewHolder viewHolder;
+        ViewHolder viewHolder = null;
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) getContext()
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -33,8 +33,8 @@ public class RecensioniAdapter extends ArrayAdapter<ItemElencoRecensioni> {
 
             viewHolder = new ViewHolder();
             viewHolder.mese = (TextView)convertView.findViewById(R.id.mese);
-            viewHolder.titolo = (TextView)convertView.findViewById(R.id.label);
-            viewHolder.link_scheda = (TextView)convertView.findViewById(R.id.secondLine);
+            viewHolder.name = (TextView)convertView.findViewById(R.id.label);
+            viewHolder.description = (TextView)convertView.findViewById(R.id.secondLine);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -42,14 +42,14 @@ public class RecensioniAdapter extends ArrayAdapter<ItemElencoRecensioni> {
 
         ItemElencoRecensioni r = getItem(position);
         viewHolder.mese.setText(r.getMese());
-        viewHolder.titolo.setText(r.getFilm().getTitolo());
-        viewHolder.link_scheda.setText(r.getFilm().getIdFilm());
+        viewHolder.name.setText(r.getFilm().getTitolo());
+        viewHolder.description.setText(r.getFilm().getIdFilm());
         return convertView;
     }
 
     private class ViewHolder {
         public TextView mese;
-        public TextView titolo;
-        public TextView link_scheda;
+        public TextView name;
+        public TextView description;
     }
 }

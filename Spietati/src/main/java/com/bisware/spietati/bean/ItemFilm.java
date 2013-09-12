@@ -1,22 +1,12 @@
 package com.bisware.spietati.bean;
 
-public class ElencoRecensioniItem {
-    private String mese;
+public class ItemFilm {
     private String titolo;
     private String idFilm;
 
-    public ElencoRecensioniItem(String mese, String titolo, String idFilm) {
-        this.mese = mese;
+    public ItemFilm(String titolo, String idFilm) {
         this.titolo = titolo;
         this.idFilm = idFilm;
-    }
-
-    public String getMese() {
-        return mese;
-    }
-
-    public void setMese(String mese) {
-        this.mese = mese;
     }
 
     public String getTitolo() {
