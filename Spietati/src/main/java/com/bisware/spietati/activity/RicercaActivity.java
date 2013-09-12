@@ -18,13 +18,19 @@ import android.widget.Toast;
 import com.bisware.spietati.R;
 import com.bisware.spietati.adapter.RicercaAdapter;
 import com.bisware.spietati.bean.ItemElencoRecensioni;
+import com.bisware.spietati.bean.ItemFilm;
 import com.bisware.spietati.utils.Costanti;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 
 public class RicercaActivity extends Activity {
 
@@ -36,17 +42,12 @@ public class RicercaActivity extends Activity {
         // Get the message from the intent
         Intent intent = getIntent();
         String qry = intent.getStringExtra(MainActivity.EXTRA_QUERY_RICERCA);
-
-        // Create the text view
-        //TextView textView = (TextView)findViewById(R.id.txtQryRicerca);
-        //textView.setText(qry);
-
         setContentView(R.layout.activity_ricerca);
 
         new RicercaTitoliTask().execute(qry);
 
         // Show the Up button in the action bar.
-        setupActionBar();
+        //setupActionBar();
     }
 
     public void apriRecensione(ItemElencoRecensioni r) {
@@ -56,7 +57,7 @@ public class RicercaActivity extends Activity {
     }
 
 
-    private class RicercaTitoliTask extends AsyncTask<String, Void, List<ItemElencoRecensioni>> {
+    private class RicercaTitoliTask extends AsyncTask<String, Void, List<ItemFilm>> {
 
         protected ProgressDialog loadingWheel;
         protected Exception eccezione = null;
@@ -69,19 +70,21 @@ public class RicercaActivity extends Activity {
 
 
         @Override
-        protected List<ItemElencoRecensioni> doInBackground(String... qry) {
+        protected List<ItemFilm> doInBackground(String... qry) {
             String query  = qry[0];
 
             try {
                 ricercaTitoli(query);
             } catch (Exception e) {
-                e.printStackTrace();
+                this.eccezione = e;
             }
 
             return null;
         }
 
-        private void ricercaTitoli(String qry) throws Exception {
+        private List<ItemFilm> ricercaTitoli(String qry) throws Exception {
+
+            List<ItemFilm> list = new LinkedList<ItemFilm>();
 
             URL url = new URL(
                     "https://www.googleapis.com/customsearch/v1" +
@@ -99,17 +102,32 @@ public class RicercaActivity extends Activity {
             System.out.println("Output from Server .... \n");
             while ((output = br.readLine()) != null) {
 
+                String titolo = "";
+                if(output.contains("\"title\": \"")){
+                    String title=output.substring(output.indexOf("\"title\": \"")+("\"title\": \"").length(), output.indexOf("\","));
+                    System.out.println(title);
+                    titolo = title;
+                }
+
+                String estratto = "";
                 if(output.contains("\"link\": \"")){
                     String link=output.substring(output.indexOf("\"link\": \"")+("\"link\": \"").length(), output.indexOf("\","));
-                    System.out.println(link);       //Will print the google search links
+                    System.out.println(link);
+                    estratto = link;
+                }
+
+                if (!titolo.equals("") && !estratto.equals(""))  {
+                    list.add(new ItemFilm(titolo, estratto));
                 }
             }
 
             conn.disconnect();
+
+            return list;
         }
 
         @Override
-        protected void onPostExecute(List<ItemElencoRecensioni> result) {
+        protected void onPostExecute(List<ItemFilm> result) {
             loadingWheel.dismiss();
 
             if (this.eccezione != null) {

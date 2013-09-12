@@ -5,7 +5,7 @@
                 android:padding="6dip" >
 
     <ImageView
-            android:id="@+id/icon"
+            android:id="@+id/ricercaImg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="false"
@@ -18,16 +18,16 @@
             android:adjustViewBounds="true"/>
 
     <TextView
-            android:id="@+id/label"
+            android:id="@+id/ricercaTitolo"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignWithParentIfMissing="false"
             android:text="Example application"
             android:textSize="16sp"
-            android:layout_alignLeft="@+id/secondLine"/>
+            android:layout_alignLeft="@+id/ricercaEstratto"/>
 
     <TextView
-            android:id="@+id/secondLine"
+            android:id="@+id/ricercaEstratto"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ellipsize="marquee"
@@ -35,8 +35,8 @@
             android:text="Description"
             android:textSize="12sp"
             android:layout_alignWithParentIfMissing="false"
-            android:layout_below="@+id/icon"
-            android:layout_toRightOf="@+id/icon"
+            android:layout_below="@+id/ricercaTitolo"
+            android:layout_toRightOf="@+id/ricercaImg"
             android:layout_alignParentRight="false"
             android:layout_alignParentBottom="false"
             android:layout_alignParentTop="false"/>

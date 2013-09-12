@@ -69,8 +69,6 @@ public class MainActivity extends Activity {
         //Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
         //intent.putExtra(SearchManager.SUGGEST_URI_PATH_QUERY, queryRicerca);
         startActivity(intent);
-
-        //showMessage("Ricerca " + queryRicerca + " in corso...");
     }
 
     private void aggiornaElenco(View view) {

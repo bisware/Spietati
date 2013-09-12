@@ -1,21 +1,24 @@
 package com.bisware.spietati.adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bisware.spietati.R;
-import com.bisware.spietati.bean.ItemElencoRecensioni;
+import com.bisware.spietati.bean.ItemFilm;
+import com.bisware.spietati.utils.Utils;
 
 import java.util.List;
 
 
-public class RicercaAdapter extends ArrayAdapter<ItemElencoRecensioni> {
+public class RicercaAdapter extends ArrayAdapter<ItemFilm> {
 
-    public RicercaAdapter(Context context, int textViewResourceId, List<ItemElencoRecensioni> values) {
+    public RicercaAdapter(Context context, int textViewResourceId, List<ItemFilm> values) {
         super(context, textViewResourceId, values);
     }
 
@@ -25,31 +28,59 @@ public class RicercaAdapter extends ArrayAdapter<ItemElencoRecensioni> {
     }
 
     public View getViewOptimize(int position, View convertView, ViewGroup parent) {
-        ViewHolder viewHolder = null;
+
+        final ImageView locandina;
+
+        ViewHolder viewHolder;
+
         if (convertView == null) {
+            locandina = (ImageView)convertView.findViewById(R.id.ricercaImg);
             LayoutInflater inflater = (LayoutInflater) getContext()
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.row_elenco_film, parent, false);
 
             viewHolder = new ViewHolder();
-            viewHolder.mese = (TextView)convertView.findViewById(R.id.mese);
-            viewHolder.name = (TextView)convertView.findViewById(R.id.label);
-            viewHolder.description = (TextView)convertView.findViewById(R.id.secondLine);
+            viewHolder.locandina = locandina;
+            viewHolder.titolo = (TextView)convertView.findViewById(R.id.ricercaTitolo);
+            viewHolder.estratto = (TextView)convertView.findViewById(R.id.ricercaEstratto);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
+            locandina = viewHolder.locandina;
         }
 
-        ItemElencoRecensioni r = getItem(position);
-        viewHolder.mese.setText(r.getMese());
-        viewHolder.name.setText(r.getFilm().getTitolo());
-        viewHolder.description.setText(r.getFilm().getIdFilm());
+        ItemFilm r = getItem(position);
+
+        final String src = "";//r.getLocandina();
+
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    final Bitmap b = Utils.getBitmapFromURL(src);
+                    locandina.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                locandina.setImageBitmap(b);
+                            } catch (Exception e1) {
+                                System.out.println(e1.getMessage());
+                            }
+                        }
+                    });
+                } catch (Exception e1) {
+                    System.out.println(e1.getMessage());
+                }
+            }
+        }).start();
+
+        viewHolder.titolo.setText(r.getTitolo());
+        viewHolder.estratto.setText(r.getIdFilm());
         return convertView;
     }
 
     private class ViewHolder {
-        public TextView mese;
-        public TextView name;
-        public TextView description;
+        public ImageView locandina;
+        public TextView titolo;
+        public TextView estratto;
     }
 }
