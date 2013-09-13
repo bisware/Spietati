@@ -99,17 +99,17 @@ public class RicercaActivity extends Activity {
                     (conn.getInputStream())));
 
             String output;
-            System.out.println("Output from Server .... \n");
+            String titolo = "";
+            String estratto = "";
+
             while ((output = br.readLine()) != null) {
 
-                String titolo = "";
                 if(output.contains("\"title\": \"")){
                     String title=output.substring(output.indexOf("\"title\": \"")+("\"title\": \"").length(), output.indexOf("\","));
                     System.out.println(title);
                     titolo = title;
                 }
 
-                String estratto = "";
                 if(output.contains("\"link\": \"")){
                     String link=output.substring(output.indexOf("\"link\": \"")+("\"link\": \"").length(), output.indexOf("\","));
                     System.out.println(link);
@@ -118,6 +118,7 @@ public class RicercaActivity extends Activity {
 
                 if (!titolo.equals("") && !estratto.equals(""))  {
                     list.add(new ItemFilm(titolo, estratto));
+                    titolo= ""; estratto = "";
                 }
             }
 

@@ -1,13 +1,19 @@
 package com.bisware.spietati.demo;
 
+import android.content.res.Resources;
+import android.util.Log;
+
+import com.bisware.spietati.R;
 import com.bisware.spietati.bean.Recensione;
 import com.bisware.spietati.bean.SchedaFilm;
+import com.bisware.spietati.utils.Utils;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.jsoup.Jsoup;
@@ -16,7 +22,10 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -39,27 +48,54 @@ public class ParserDemo {
         String cx = "partner-pub-4445160703635697%3Avo6do6-qhci";
         String siteSearch = "www.spietati.it";
 
-        URL url = new URL(
-                "https://www.googleapis.com/customsearch/v1?key="+key +
-                        "&cx="+ cx + "&q="+ qry + "&alt=json");
+//        URL url = new URL(
+//                "https://www.googleapis.com/customsearch/v1?key="+key +
+//                        "&cx="+ cx + "&q="+ qry + "&alt=json");
+//
+//        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+//        conn.setRequestMethod("GET");
+//        conn.setRequestProperty("Accept", "application/json");
 
-        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        conn.setRequestMethod("GET");
-        conn.setRequestProperty("Accept", "application/json");
-        BufferedReader br = new BufferedReader(new InputStreamReader(
-                (conn.getInputStream())));
-
-        String output;
-        System.out.println("Output from Server .... \n");
-        while ((output = br.readLine()) != null) {
-
-            if(output.contains("\"link\": \"")){
-                String link=output.substring(output.indexOf("\"link\": \"")+("\"link\": \"").length(), output.indexOf("\","));
-                System.out.println(link);       //Will print the google search links
-            }
+        String jsonString ="";
+        InputStream inputStream = Resources.getSystem().openRawResource(R.raw.demo);
+        try {
+            jsonString = Utils.getStringFromInputStream(inputStream);
+        } finally {
+            inputStream.close();
         }
 
-        conn.disconnect();
+//        InputStream is = conn.getInputStream();
+//        jsonString = Utils.getStringFromInputStream(is);
+        try {
+            JSONArray jsonArray = new JSONArray(jsonString);
+            System.out.println("Number of entries " + jsonArray.length());
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                System.out.println(jsonObject.getString("title"));
+                System.out.println(jsonObject.getString("link"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+//        String output;
+//        BufferedReader br = new BufferedReader(new InputStreamReader(is));
+//        System.out.println("Output from Server .... \n");
+//        while ((output = br.readLine()) != null) {
+//
+//            if(output.contains("\"title\": \"")){
+//                String title=output.substring(output.indexOf("\"title\": \"")+("\"title\": \"").length(), output.indexOf("\","));
+//                System.out.println(title);
+//            }
+//
+//            if(output.contains("\"link\": \"")){
+//                String link=output.substring(output.indexOf("\"link\": \"")+("\"link\": \"").length(), output.indexOf("\","));
+//                System.out.println(link);       //Will print the google search links
+//            }
+//
+//        }
+
+//        conn.disconnect();
     }
 
     private static void testRecensione(String idfilm)throws IOException {

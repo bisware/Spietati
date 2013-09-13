@@ -42,10 +42,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="273dd8ca-c243-4564-b341-ef3f69423749" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/MainActivity.java" afterPath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/demo/ParserDemo.java" afterPath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/demo/ParserDemo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/RicercaActivity.java" afterPath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/RicercaActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/adapter/RicercaAdapter.java" afterPath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/adapter/RicercaAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Spietati/src/main/res/layout/row_ricerca.xml" afterPath="$PROJECT_DIR$/Spietati/src/main/res/layout/row_ricerca.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/utils/Utils.java" afterPath="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/utils/Utils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Spietati.iws" />
@@ -102,7 +101,7 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/utils/Utils.java" line="29" class="com.bisware.spietati.utils.Utils" package="com.bisware.spietati.utils">
+      <breakpoint url="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/utils/Utils.java" line="32" class="com.bisware.spietati.utils.Utils" package="com.bisware.spietati.utils">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -192,7 +191,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/demo/ParserDemo.java" line="46" class="com.bisware.spietati.demo.ParserDemo" package="com.bisware.spietati.demo">
+      <breakpoint url="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/demo/ParserDemo.java" line="97" class="com.bisware.spietati.demo.ParserDemo" package="com.bisware.spietati.demo">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -207,22 +206,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/demo/ParserDemo.java" line="61" class="com.bisware.spietati.demo.ParserDemo" package="com.bisware.spietati.demo">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/demo/ParserDemo.java" line="52" class="com.bisware.spietati.demo.ParserDemo" package="com.bisware.spietati.demo">
+      <breakpoint url="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/demo/ParserDemo.java" line="82" class="com.bisware.spietati.demo.ParserDemo" package="com.bisware.spietati.demo">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -267,22 +251,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/RicercaActivity.java" line="101" class="com.bisware.spietati.activity.RicercaActivity.RicercaTitoliTask" package="com.bisware.spietati.activity">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/RicercaActivity.java" line="123" class="com.bisware.spietati.activity.RicercaActivity.RicercaTitoliTask" package="com.bisware.spietati.activity">
+      <breakpoint url="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/RicercaActivity.java" line="124" class="com.bisware.spietati.activity.RicercaActivity.RicercaTitoliTask" package="com.bisware.spietati.activity">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -312,7 +281,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/RicercaActivity.java" line="106" class="com.bisware.spietati.activity.RicercaActivity.RicercaTitoliTask" package="com.bisware.spietati.activity">
+      <breakpoint url="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/RicercaActivity.java" line="107" class="com.bisware.spietati.activity.RicercaActivity.RicercaTitoliTask" package="com.bisware.spietati.activity">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -342,6 +311,51 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/RicercaActivity.java" line="119" class="com.bisware.spietati.activity.RicercaActivity.RicercaTitoliTask" package="com.bisware.spietati.activity">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/demo/ParserDemo.java" line="69" class="com.bisware.spietati.demo.ParserDemo" package="com.bisware.spietati.demo">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/demo/ParserDemo.java" line="59" class="com.bisware.spietati.demo.ParserDemo" package="com.bisware.spietati.demo">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
     </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
@@ -355,22 +369,38 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="30" selection-start="2293" selection-end="2293" vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="2363">
+            <state line="70" column="30" selection-start="2293" selection-end="2293" vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="3060">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RicercaActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RicercaActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/RicercaActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="40" selection-start="3118" selection-end="3118" vertical-scroll-proportion="0.5729795" vertical-offset="1174" max-vertical-offset="3536">
+            <state line="117" column="0" selection-start="3350" selection-end="3925" vertical-scroll-proportion="0.0" vertical-offset="1633" max-vertical-offset="3468">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2595#2605#0" expanded="true" />
-                <element signature="e#4831#5213#0" expanded="true" />
-                <element signature="e#5198#5199#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParserDemo.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/demo/ParserDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="32" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.48140043" vertical-offset="375" max-vertical-offset="2193">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/utils/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="64" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.0" vertical-offset="490" max-vertical-offset="1190">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -378,7 +408,7 @@
       <file leaf-file-name="RicercaAdapter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/adapter/RicercaAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="42" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
+            <state line="12" column="42" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1564">
               <folding />
             </state>
           </provider>
@@ -387,7 +417,7 @@
       <file leaf-file-name="ItemFilm.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/bean/ItemFilm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="23" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+            <state line="3" column="23" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="561">
               <folding />
             </state>
           </provider>
@@ -706,14 +736,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/local.properties" />
-        <option value="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/demo/ParserDemo.java" />
         <option value="$PROJECT_DIR$/Spietati/src/main/res/layout/activity_recensione.xml" />
         <option value="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/utils/Costanti.java" />
         <option value="$PROJECT_DIR$/Spietati/Spietati.iml" />
         <option value="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/DisplayRecensioneActivity.java" />
         <option value="$PROJECT_DIR$/Spietati/src/main/res/layout/activity_ricerca.xml" />
-        <option value="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/utils/Utils.java" />
         <option value="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/bean/ItemFilm.java" />
         <option value="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/bean/ElencoRecensioniItem.java" />
         <option value="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/adapter/RecensioniAdapter.java" />
@@ -722,6 +749,9 @@
         <option value="$PROJECT_DIR$/Spietati/src/main/res/layout/row_ricerca.xml" />
         <option value="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/adapter/RicercaAdapter.java" />
         <option value="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/RicercaActivity.java" />
+        <option value="$PROJECT_DIR$/Spietati/src/main/res/values/demo.txt" />
+        <option value="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/utils/Utils.java" />
+        <option value="$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/demo/ParserDemo.java" />
       </list>
     </option>
   </component>
@@ -794,6 +824,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -905,7 +936,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spietati" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpietatiProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spietati" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="raw" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -932,165 +993,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spietati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spietati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SpietatiProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spietati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spietati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spietati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SpietatiProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spietati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spietati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bean" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spietati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SpietatiProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spietati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spietati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adapter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spietati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SpietatiProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spietati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spietati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Spietati/libs/android-support-v4.jar!/" />
-    <property name="DEBUGGABLE_DEVICE" value="HT078PL00552" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="DEBUGGABLE_DEVICE" value="HT078PL00552" />
     <property name="DEBUGGABLE_PROCESS" value="com.bisware.spietati" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="HTCDesire" />
@@ -1106,8 +1026,8 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="HT078PL00552" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1124,13 +1044,16 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.bisware.spietati" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Dati\workspace\SpietatiProject\Spietati\src\main\res\raw" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.bisware.spietati" />
       <recent name="" />
       <recent name="com.bisware.spietati.bean" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Application.Spietati">
+  <component name="RunManager" selected="Application.ParserDemo">
     <configuration default="false" name="ParserDemo" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.bisware.spietati.demo.ParserDemo" />
       <option name="VM_PARAMETERS" value="" />
@@ -1337,7 +1260,11 @@
       <created>1379001995509</created>
       <updated>1379001995509</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Implementing:&#10;- ricerca con bug">
+      <created>1379003361682</created>
+      <updated>1379003361682</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1367,11 +1294,9 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5707491" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5707491" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890624" sideWeight="0.5714286" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328341" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42857143" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42857143" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42857143" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982457" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1393,6 +1318,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890624" sideWeight="0.5714286" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328341" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1409,7 +1336,8 @@
     <MESSAGE value="Fixed:&#10;- lost connection" />
     <MESSAGE value="Fixed:&#10;- progetto sotto android studio&#10;Added:&#10;- ricerca" />
     <MESSAGE value="Refactoring:&#10;- classe per gli elementi film che verrà usata per le recensioni e per la ricerca" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring:&#10;- classe per gli elementi film che verrà usata per le recensioni e per la ricerca" />
+    <MESSAGE value="Implementing:&#10;- ricerca con bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing:&#10;- ricerca con bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1419,55 +1347,26 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SpietatiProject.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="0.020190023" vertical-offset="0" max-vertical-offset="842" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Spietati/src/main/res/layout/activity_recensione.xml">
-      <provider editor-type-id="text-editor">
-        <state line="23" column="8" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1666">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
+    <entry file="file://$PROJECT_DIR$/Spietati/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Spietati/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="0" selection-start="1816" selection-end="2103" vertical-scroll-proportion="0.59825873" vertical-offset="403" max-vertical-offset="1207">
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Spietati/src/main/res/layout/activity_ricerca.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Spietati/src/main/res/layout/activity_ricerca.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="48" selection-start="896" selection-end="896" vertical-scroll-proportion="0.44402984" vertical-offset="0" max-vertical-offset="804">
           <folding>
-            <element signature="e#648#669#0" expanded="true" />
-            <element signature="e#829#847#0" expanded="true" />
+            <element signature="e#648#669#0" expanded="false" />
+            <element signature="e#829#847#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/utils/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="5" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.64608073" vertical-offset="0" max-vertical-offset="842">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Spietati/build/res/all/debug/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="35" selection-start="1633" selection-end="1633" vertical-scroll-proportion="0.375765" vertical-offset="339" max-vertical-offset="1207">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1493,23 +1392,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Spietati/src/main/res/layout/row_ricerca.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="52" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.7823383" vertical-offset="0" max-vertical-offset="833">
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Spietati/src/main/res/layout/row_elenco_film.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Spietati/src/main/res/layout/row_elenco_film.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="36" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.6131841" vertical-offset="0" max-vertical-offset="1071">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/adapter/RicercaAdapter.java">
@@ -1542,13 +1441,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/activity/RicercaActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="40" selection-start="3118" selection-end="3118" vertical-scroll-proportion="0.5729795" vertical-offset="1174" max-vertical-offset="3536">
+        <state line="117" column="0" selection-start="3350" selection-end="3925" vertical-scroll-proportion="0.0" vertical-offset="1633" max-vertical-offset="3468">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2595#2605#0" expanded="true" />
-            <element signature="e#4831#5213#0" expanded="true" />
-            <element signature="e#5198#5199#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="64" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.0" vertical-offset="490" max-vertical-offset="1190">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Spietati/src/main/res/raw/demo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="470">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Spietati/src/main/java/com/bisware/spietati/demo/ParserDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="32" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.48140043" vertical-offset="375" max-vertical-offset="2193">
+          <folding />
         </state>
       </provider>
     </entry>
